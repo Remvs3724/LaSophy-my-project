@@ -17,7 +17,7 @@ const DashboardHeader = () => {
   // Fetch authentication status from backend
   /*
   useEffect(() => {
-    axios.get("http://localhost:5001", { withCredentials: true })
+    axios.get(${process.env.REACT_APP_API_URL}", { withCredentials: true })
       .then(response => {
         console.log('isadmin',response.data)
         if (response.data.loginOrnot) {
@@ -31,7 +31,7 @@ const DashboardHeader = () => {
 */
   // Logout function
   const handleLogout = () => {
-    axios.get("http://localhost:5001/logout", { withCredentials: true })
+    axios.get(`${process.env.REACT_APP_API_URL}/logout`, { withCredentials: true })
       .then(() => {
         navigate("/");
         setCurrentUser("");

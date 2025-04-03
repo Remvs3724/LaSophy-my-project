@@ -8,7 +8,7 @@ const DashboardContent = () => {
 const [books, setBooks] = useState([]);
   const navigate = useNavigate();
   useEffect(() => {
-    axios.get("http://localhost:5001/api/books") // Fetch book data from backend
+    axios.get(`${process.env.REACT_APP_API_URL}/api/books`) // Fetch book data from backend
         .then(response => {
          setBooks(response.data)})
         .catch(error => console.error("Error fetching books:", error));

@@ -63,7 +63,7 @@ const Comments=({bookInfo, comments, currentuser, setComments})=>{
     const currentComment = comment; 
     setComment(""); 
      
-    axios.post("http://localhost:5001/comments", 
+    axios.post(`${process.env.REACT_APP_API_URL}/comments`, 
         {content:currentComment,
         createdBy: currentuser? currentuser.username : 'Guest'|| null,
         cmt_book: bookInfo.pdf_path,
@@ -194,7 +194,7 @@ const CommentItem = ({ comment, setComments, currentUser, onReply, replyingTo, l
   const handleReplySubmit = () => {
       if (!replyText.trim()) return;
 
-      axios.post("http://localhost:5001/comments",
+      axios.post(${process.env.REACT_APP_API_URL}/comments",
           {
               content: replyText,
               createdBy: currentUser? currentUser.username : 'Guest',

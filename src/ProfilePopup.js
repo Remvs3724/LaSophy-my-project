@@ -40,7 +40,7 @@ const PopupWindow = () => {
             uni_code: currentUserProfile.uni_code,
           };
 
-    const response=await axios.post("http://localhost:5001/settings/profile", updatedValues)
+    const response=await axios.post(`${process.env.REACT_APP_API_URL}/settings/profile`, updatedValues)
     if(response.data.message==="Update successful" && response.data.updatedInfo){
         message.success(response.data.message, 1);
         setcurrentUserProfile( response.data.updatedInfo)

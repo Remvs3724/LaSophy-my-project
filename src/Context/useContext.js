@@ -8,7 +8,7 @@ export const UserProvider=({children})=>{
     const [loadingUser, setLoadingUser] = useState(true);
 
     useEffect(() => {
-      axios.get("http://localhost:5001", { withCredentials: true })
+      axios.get(`${process.env.REACT_APP_API_URL}`, { withCredentials: true })
         .then(response => {
           if (response.data.loginOrnot) {
             setCurrentUser(response.data.currentUser);

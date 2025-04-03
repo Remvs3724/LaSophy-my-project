@@ -14,10 +14,10 @@ const Login = () => {
       if(isChecked){
         values.isAdmin = true;
       }
-      const response = await axios.post("http://localhost:5001/login", values, { withCredentials: true });
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/login`, values, { withCredentials: true });
       if(response.data.message==="Login successful"){
       message.success(response.data.message, 1);
-      const userRes = await axios.get("http://localhost:5001/", {
+      const userRes = await axios.get(`${process.env.REACT_APP_API_URL}/`, {
         withCredentials: true,
       });
       if(userRes.data.loginOrnot){

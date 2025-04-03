@@ -18,7 +18,7 @@ const navigate = useNavigate();
     e.domEvent.stopPropagation();
     if(e.key==="cancel"){
     const cancelTarget={uni_code: book.uni_code, pdf_path: book.pdf_path}
-      axios.post("http://localhost:5001/cancelcollects", cancelTarget)
+      axios.post(`${process.env.REACT_APP_API_URL}/cancelcollects`, cancelTarget)
       .then(response=>{
         if(response.data.message==="Delete collects"){
           message.success(response.data.message)

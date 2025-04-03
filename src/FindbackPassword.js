@@ -11,7 +11,7 @@ const FindBack=()=>{
      const handlefinduser= async()=>{
         const email=form.getFieldValue("email")
         try{
-        const response=await axios.post("http://localhost:5001/findback", {email})
+        const response=await axios.post(`${process.env.REACT_APP_API_URL}/findback`, {email})
         if(response.data.message==="User exists"){
             message.success(response.data.message)
             setUserExist(true)
@@ -30,7 +30,7 @@ const FindBack=()=>{
             const email=form.getFieldValue("email")
 
           try{
-            const response=await axios.post("http://localhost:5001/updatepassword", {password, email})
+            const response=await axios.post(`${process.env.REACT_APP_API_URL}/updatepassword`, {password, email})
             if(response.data.message==="Update the password successful"){
                message.success(response.data.message)
                setTimeout(()=>{
@@ -57,7 +57,7 @@ const FindBack=()=>{
                 message.error("Please enter email first!")
                 return;
               }
-            const response=await axios.post("http://localhost:5001/get_code", {email})
+            const response=await axios.post(`${process.env.REACT_APP_API_URL}/get_code`, {email})
              if (response.data.message) {
                message.success("Verification code sent to your email");
       }
@@ -74,7 +74,7 @@ const FindBack=()=>{
             try{
             const code=form.getFieldValue("verify_code")
             const email=form.getFieldValue("email")
-        const response=await axios.post("http://localhost:5001/verifycodeforpassword", {code, email})
+        const response=await axios.post(`${process.env.REACT_APP_API_URL}/verifycodeforpassword`, {code, email})
              if (response.data.message==="Verify successful!") {
                message.success(response.data.message)
                setVerify(true)

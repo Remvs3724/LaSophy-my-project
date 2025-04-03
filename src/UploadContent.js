@@ -68,7 +68,7 @@ const UploadContent=()=>{
                 })
           };
           console.log('payload',payload)
-      const response=await axios.post("http://localhost:5001/upload/metadata", payload)
+      const response=await axios.post(`${process.env.REACT_APP_API_URL}/upload/metadata`, payload)
       if(response.data.message==="Upload successful"){
         message.success(response.data.message)
       }
@@ -123,7 +123,7 @@ const UploadContent=()=>{
      <Dragger
     name="cover"
     multiple={false}
-    action="http://localhost:5001/upload/img" // <-- your server endpoint
+    action={`${process.env.REACT_APP_API_URL}/upload/img`} // <-- your server endpoint
     onChange={(info) => {
       const {status,response} = info.file;
 
@@ -159,7 +159,7 @@ const UploadContent=()=>{
 <Dragger
     name="file"
     multiple={false}
-    action="http://localhost:5001/upload/pdf" // <-- your server endpoint
+    action={`${process.env.REACT_APP_API_URL}/upload/pdf`} // <-- your server endpoint
     onChange={(info) => {
         console.log(info.file)
       const {status,response} = info.file;
@@ -200,7 +200,7 @@ const UploadContent=()=>{
      <Dragger
     name="map"
     multiple={false}
-    action="http://localhost:5001/upload/map" 
+    action={`${process.env.REACT_APP_API_URL}/upload/map`} 
     onChange={(info) => {
       const {status,response} = info.file;
 
@@ -237,7 +237,7 @@ const UploadContent=()=>{
      <Dragger
     name="map_cover"
     multiple={false}
-    action="http://localhost:5001/upload/map_cover" 
+    action={`${process.env.REACT_APP_API_URL}/upload/map_cover`}
     onChange={(info) => {
       const {status,response} = info.file;
 

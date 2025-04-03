@@ -38,7 +38,7 @@ const CommentList = ({ comments, setComments, currentUser, onReply, replyingTo})
   
     const handleReplySubmit = () => {
         if (!replyText.trim()) return;
-        axios.post("http://localhost:5001/comments",
+        axios.post(`${process.env.REACT_APP_API_URL}/comments`,
             {
                 content: replyText,
                 createdBy: currentUser? currentUser.username : 'Guest',

@@ -8,7 +8,7 @@ const Signup = () => {
     const navigate = useNavigate();
   const onFinish = async (values) => {
     try {
-      const response = await axios.post("http://localhost:5001/signup", values);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/signup`, values);
       if(response.data.message==="Signup successful!"){
        message.success(response.data.message, 1);
 
@@ -30,7 +30,7 @@ const Signup = () => {
         return;
       }
 
-      const response=await axios.post("http://localhost:5001/send_code", {email})
+      const response=await axios.post(`${process.env.REACT_APP_API_URL}/send_code`, {email})
       if (response.data.message) {
         message.success("Verification code sent to your email");
       }

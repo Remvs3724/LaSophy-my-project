@@ -11,7 +11,7 @@ const Statistics=()=>{
     const [loading, setLoading] = useState(true);
     const data = [{ type: 'All users', value: totalUsers }];
 useEffect(()=>{
-  axios.get("http://localhost:5001/statistics", { withCredentials: true })
+  axios.get(`${process.env.REACT_APP_API_URL}/statistics`, { withCredentials: true })
   .then(response=>{
     if(response){
          console.log(response.data)

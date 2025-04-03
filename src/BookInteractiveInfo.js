@@ -17,7 +17,7 @@ const InteractiveInfo=({bookInfo, comments, likeSituation, countLikes, collectSi
 
     const handeleClickLike=()=>{
         const UpdatedLikes={pdf_path:bookInfo.pdf_path, currentUser: currentUser}
-        axios.post("http://localhost:5001/interactives", UpdatedLikes,{ withCredentials: true })
+        axios.post(`${process.env.REACT_APP_API_URL}/interactives`, UpdatedLikes,{ withCredentials: true })
         .then(response=>{
             if(response.data.message==="Like"){
                 message.success(response.data.message, 0.5)
@@ -35,7 +35,7 @@ const InteractiveInfo=({bookInfo, comments, likeSituation, countLikes, collectSi
 
     const handleClickCollect=()=>{
         const UpdatedCollects={pdf_path:bookInfo.pdf_path, currentUser: currentUser}
-        axios.post("http://localhost:5001/collects", UpdatedCollects,{ withCredentials: true })
+        axios.post(`${process.env.REACT_APP_API_URL}/collects`, UpdatedCollects,{ withCredentials: true })
         .then(response=>{
             if(response.data.message==="Collect"){
                 message.success(response.data.message, 1)
