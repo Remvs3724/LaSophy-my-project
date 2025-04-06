@@ -63,7 +63,7 @@ const navigate = useNavigate();
                         <div style={{ position: "relative" }}>
                         <img 
                             alt={book.title} 
-                            src={`http://localhost:5001/imgCover/${book.img_path}`} 
+                            src={`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/imgCover/${book.img_path}`} 
                             style={{ height: "220px", objectFit: "cover" ,width: "100%", display: "block" }} 
                         />
                         {currentUserProfile?.uni_code===currentUser?.uni_code && 

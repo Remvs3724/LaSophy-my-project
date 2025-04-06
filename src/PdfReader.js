@@ -12,7 +12,7 @@ const PdfReader=()=>{
     const { pdfPath } = useParams();
     const defaultLayoutPluginInstance = defaultLayoutPlugin();
     const decodedPdfPath = decodeURIComponent(pdfPath);
-    const pdfUrl = `http://localhost:5001/PDFdb/${decodedPdfPath}`;
+    const pdfUrl = `https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/PDFdb/${decodedPdfPath}`;
     return (
         <Content
         style={{

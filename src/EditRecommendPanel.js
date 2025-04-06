@@ -12,7 +12,7 @@ const EditRecommendPanel=()=>{
   const onFinish= async (values)=>{
     const passValuesToRecommend={...values, uni_code:book.uni_code, username: book.username, pdf_path: book.pdf_path}
     console.log('data', passValuesToRecommend)
-    const response=await axios.post('http://localhost:5001/recommend', passValuesToRecommend)
+    const response=await axios.post(`${process.env.REACT_APP_API_URL}/recommend`, passValuesToRecommend)
     if(response.data.message==="Recommend successful"){
      message.success(response.data.message)
     }else{

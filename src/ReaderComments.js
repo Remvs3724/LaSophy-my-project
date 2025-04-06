@@ -24,7 +24,7 @@ const ReaderComments = () => {
     
 
     useEffect(()=>{
-    axios.get(`http://localhost:5001/PDFreader/${decodedPdfPath}`,{ withCredentials: true })//don't fogert the withcredential
+    axios.get(`${process.env.REACT_APP_API_URL}/PDFreader/${decodedPdfPath}`,{ withCredentials: true })//don't fogert the withcredential
     .then(response=>{
         if(!response.data.book || response.data.message){
             message.error(response.data.message)

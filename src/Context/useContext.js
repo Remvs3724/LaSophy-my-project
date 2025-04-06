@@ -18,7 +18,7 @@ export const UserProvider=({children})=>{
         })
         .catch(error => console.error("Error fetching auth status:", error))
         .finally(() => {
-          setLoadingUser(false); // ✅ Now it's done loading
+          setLoadingUser(false); 
         })
     }, []);
 

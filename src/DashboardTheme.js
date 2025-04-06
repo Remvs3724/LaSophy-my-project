@@ -11,7 +11,7 @@ const DashboardTheme=()=>{
       cover={
         <img
         alt=""
-        src={'http://localhost:5001/themeCover/themebook.png'}
+        src={`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/themeCover/themebook.png`}
         style={{ height: "400px", objectFit: "cover" }} 
         />
 
@@ -28,7 +28,7 @@ const DashboardTheme=()=>{
       cover={
         <img
         alt=""
-        src={'http://localhost:5001/themeCover/thememap.png'}
+        src={`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/themeCover/thememap.png`}
         style={{ height: "400px", objectFit: "cover" }} 
         />
       }

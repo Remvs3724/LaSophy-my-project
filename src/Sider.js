@@ -27,7 +27,7 @@ const DashboardSider=({user})=>{
         
           <img 
           style={{ width: "50px", height: "50px" }}
-          src={'http://localhost:5001/themeCover/logo.png'}
+          src={'https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/themeCover/logo.png'}
           />
         </div>
         <Menu theme="dark" 

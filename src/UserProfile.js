@@ -14,7 +14,7 @@ const UserContent=()=>{
     const {username, uni_code}=useParams()
  
     useEffect(()=>{
-        axios.get(`http://localhost:5001/${username}/${uni_code}`, { withCredentials: true })
+        axios.get(`${process.env.REACT_APP_API_URL}/${username}/${uni_code}`, { withCredentials: true })
         .then(response=>{
             if(!response.data.userProfile || response.data.message){
                 message.error(response.data.message)

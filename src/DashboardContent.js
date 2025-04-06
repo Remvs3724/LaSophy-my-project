@@ -23,11 +23,11 @@ const [books, setBooks] = useState([]);
                     cover={
                         <img 
                             alt={book.title} 
-                            src={`http://localhost:5001/imgCover/${book.img_path}`} 
+                            src={book.PublicUrl}
                             style={{ height: "340px", objectFit: "cover" }} 
                         />
                     }
-                    onClick={() => navigate(`/PDFreader/${book.pdf_path}`)}
+                    onClick={() => navigate(`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/imgCover/${book.pdf_path}`)}
                 >
                     <Meta 
                     title={ book.title} 

@@ -14,22 +14,7 @@ const DashboardHeader = () => {
     const colors = ["#f56a00", "#7265e6", "#ffbf00", "#00a2ae", "#1890ff"];
     return colors[Math.floor(Math.random() * colors.length)];
   }, []); 
-  // Fetch authentication status from backend
-  /*
-  useEffect(() => {
-    axios.get(${process.env.REACT_APP_API_URL}", { withCredentials: true })
-      .then(response => {
-        console.log('isadmin',response.data)
-        if (response.data.loginOrnot) {
-          setCurrentUser(response.data.currentUser);
-        } else {
-          setCurrentUser(null);
-        }
-      })
-      .catch(error => console.error("Error fetching auth status:", error));
-  }, [setCurrentUser]);
-*/
-  // Logout function
+  
   const handleLogout = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/logout`, { withCredentials: true })
       .then(() => {
@@ -68,7 +53,7 @@ const DashboardHeader = () => {
       <img
       alt=""
       style={{width:"120px", height:"60px"}}
-      src={'http://localhost:5001/themeCover/headerLogo.png'}
+      src={'https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/themeCover/headerLogo.png'}
       />
      </div>
       <div style={{ display: "flex",
