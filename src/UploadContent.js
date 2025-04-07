@@ -172,7 +172,7 @@ const UploadContent=()=>{
       } else if (status === "error") {
         if (response?.message === "Book already exists") {
             message.error("This book already exists!");
-          } else{
+          } else {
         message.error(`${info.file.name} upload failed`);
           }
       }

@@ -23,7 +23,7 @@ const [books, setBooks] = useState([]);
                     cover={
                         <img 
                             alt={book.title} 
-                            src={`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/imgCover/${book.pdf_path}`}
+                            src={`https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/imgCover/${book.img_path}`}
                             style={{ height: "340px", objectFit: "cover" }} 
                         />
                     }
