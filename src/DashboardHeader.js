@@ -10,10 +10,12 @@ const DashboardHeader = () => {
   const {currentUser, setCurrentUser, setcurrentUserProfile}=useContext(UserContext)
   const navigate = useNavigate();
   // if i wanna keep the color unchanged, i should use localstorage...
+  /*
   const avatarColor = useMemo(() => {
     const colors = ["#f56a00", "#7265e6", "#ffbf00", "#00a2ae", "#1890ff"];
     return colors[Math.floor(Math.random() * colors.length)];
   }, []); 
+  */
   
   const handleLogout = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/logout`, { withCredentials: true })
@@ -68,7 +70,7 @@ const DashboardHeader = () => {
            <span> Administrator</span>
            }
             <Popover content={profileCard} trigger="hover">
-              <Avatar style={{ cursor: "pointer" , backgroundColor: avatarColor}} >
+              <Avatar style={{ cursor: "pointer" /*backgroundColor: avatarColor*/}} >
               {currentUser.username?.[0]?.toUpperCase() || "?"}
                 </Avatar>
             </Popover>
