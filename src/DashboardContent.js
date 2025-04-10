@@ -14,7 +14,7 @@ const [books, setBooks] = useState([]);
         .catch(error => console.error("Error fetching books:", error));
 }, []);
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", padding: "20px" }}>
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem", padding: "1rem" }}>
             {books.map(book => (
                 <Card
                     key={book.bookId}

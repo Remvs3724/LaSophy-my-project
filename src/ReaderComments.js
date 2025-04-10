@@ -29,7 +29,6 @@ const ReaderComments = () => {
         if(!response.data.book || response.data.message){
             message.error(response.data.message)
         }else{
-          console.log('bookcomments', response.data.totalLikes)
             setInfo(response.data.book)
             setComments(response.data.comments || [])
             setCurrentuser(response.data.currentUser)

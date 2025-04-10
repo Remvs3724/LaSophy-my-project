@@ -43,7 +43,7 @@ const DashboardHeader = () => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        gap: "10px", 
+        
         alignItems: "center",
         padding: "0 20px",
         background: "#fff",
@@ -64,7 +64,7 @@ const DashboardHeader = () => {
         alignItems:"center",
         justifyContent: "flex-end",
         flex: 1,
-       minWidth: "300px"}}>
+       maxWidth: "300px"}}>
         {currentUser ? (
           <>{currentUser.admin_user && 
            <span> Administrator</span>

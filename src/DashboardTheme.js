@@ -4,10 +4,15 @@ const DashboardTheme=()=>{
   const navigate=useNavigate()
     return(
       <>
-      <div style={{display:"flex", alignItems:"center", gap:"60px", marginLeft:"20px", marginTop:"30px", minWidth:"100px"}}>
+      <div style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+    gap: "1rem",
+    padding: "1rem",
+  }}>
       <Card 
       hoverable
-      style={{ width: "500px" ,height:"500px",minWidth: "200px"}}
+      style={{ height:500}}
       cover={
         <img
         alt=""
@@ -18,13 +23,18 @@ const DashboardTheme=()=>{
       }
        onClick={()=>navigate('/books')}>
 
-        <div style={{fontSize:"20px", fontWeight:"bold"}} >Transitions and rebellion, collapse and resurgence </div>
+        <div style={{fontSize: "18px",
+                     fontWeight: "bold",
+                     //wordWrap: "break-word",
+                     textAlign: "center",
+                     maxWidth: "100%",
+                     lineHeight: "1.4",}} >Transitions and rebellion, collapse and resurgence </div>
        
       </Card>
 
       <Card 
       hoverable
-      style={{ width: "500px", height:"500px",minWidth: "200px"}}
+      style={{ height:500}}
       cover={
         <img
         alt=""

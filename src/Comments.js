@@ -40,7 +40,6 @@ const Comments=({bookInfo, comments, currentuser, setComments})=>{
   };
 
   useEffect(() => {
-    console.log('comment', comments)
     if (!Array.isArray(comments)) {
       console.error("Error: comments is not an array!", comments);
       return;

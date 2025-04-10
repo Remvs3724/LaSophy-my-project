@@ -34,7 +34,7 @@ const UserContent=()=>{
     <>
 <Card>
     <div style={{display: "flex", alignItems: "flex-start" , gap:"20px"}}>
-    <Avatar size={120} style={{fontSize:"60px"}}> {currentUserProfile?.username?.[0]?.toUpperCase() || "?"}</Avatar>
+    <Avatar size={120} style={{flexShrink: 0, borderRadius: "50%", overflow: "hidden", }}> {currentUserProfile?.username?.[0]?.toUpperCase() || "?"}</Avatar>
 
     <div style={{marginLeft:"30px", marginTop:"0px"}}> 
         <Space>

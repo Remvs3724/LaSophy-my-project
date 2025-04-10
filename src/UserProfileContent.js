@@ -10,9 +10,6 @@ const navigate = useNavigate();
    const {currentUser, userBookCollects,currentUserProfile, setUserBookCollects}=useContext(UserContext)
    const { username, uni_code } = useParams();
 
-   useEffect(()=>{
-    console.log("data",userBookCollects)
-   });
 
    const handleMenuClick=(book, e)=>{
     e.domEvent.stopPropagation();
