@@ -21,9 +21,6 @@ const handleMenuClick=()=>{
         
         ]}
         />
-
-
     )
-
 }
 export default SettingsContent
