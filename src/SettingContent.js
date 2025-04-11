@@ -15,9 +15,11 @@ const handleMenuClick=()=>{
         items={[
             {key:"account", label:"My account"},
             {key:"style", label:"style model"},
-            {key:"model", label:"light or black"}
-        ]
-        }
+            {key:"model", label:"light or black"},
+            {key:"security", label:"Security"},
+            {key:"privacy", label:"Privacy"},
+        
+        ]}
         />
 
 
