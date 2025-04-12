@@ -43,7 +43,7 @@ const DashboardHeader = () => {
       style={{
         display: "flex",
         justifyContent: "space-between",
-        
+        gap:"10px",
         alignItems: "center",
         padding: "0 20px",
         background: "#fff",
@@ -58,13 +58,16 @@ const DashboardHeader = () => {
       src={'https://storage.googleapis.com/lasophy-4e0ff.firebasestorage.app/themeCover/headerLogo.png'}
       />
      </div>
-      <div style={{ display: "flex",
+      <div style={{ display:  "flex",
         flexWrap: "wrap",
         gap: "10px",
         alignItems:"center",
         justifyContent: "flex-end",
         flex: 1,
-       maxWidth: "500px"}}>
+        paddingRight: "10px",
+        minWidth: 0, 
+
+        }}>
         {currentUser ? (
           <>{currentUser.admin_user && 
            <span> Administrator</span>

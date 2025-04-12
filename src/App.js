@@ -18,6 +18,7 @@ import AdminRoute from "./Context/AdminRoute";
 import Unauthorized from "./Context/Unauthorized";
 import FindBack from "./FindbackPassword";
 import DashboardMap from "./DashboardContentMaps";
+import 'bootstrap/dist/css/bootstrap.min.css';
 const  App=()=>{
   return (
     <Router>
