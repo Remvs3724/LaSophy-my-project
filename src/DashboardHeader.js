@@ -59,7 +59,6 @@ const DashboardHeader = () => {
       />
      </div>
       <div style={{ display:  "flex",
-        flexWrap: "wrap",
         gap: "10px",
         alignItems:"center",
         justifyContent: "flex-end",
